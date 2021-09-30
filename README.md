@@ -1,24 +1,7 @@
-# README
+# Odin-Kittins-API
+## Description
+This is a basic toy api based off of the API lesson of the Odin Project found [here.](theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/kittens-api) This a RESTful API which will pass basic html data as well as handle json requests. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Live Preview
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## How To Use
