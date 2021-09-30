@@ -18,11 +18,10 @@ class KittensController < ApplicationController
 
     def create 
         @kitten = Kitten.new(kitten_params)
-            redirect_to @kitten
         if @kitten.save
-            render :new
+            redirect_to @kitten
         else
-
+            render :new
         end
     end
 
@@ -46,7 +45,7 @@ class KittensController < ApplicationController
 
     private
     def kitten_params
-        params.require(:kitten).permit(:name, :age, :cutenes, :softness)
+        params.require(:kitten).permit(:name, :age, :cuteness, :softness)
     end
 
 end
