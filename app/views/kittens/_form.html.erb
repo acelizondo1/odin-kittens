@@ -1,4 +1,16 @@
 <%= form_with(model: @kitten) do |f| %>
+    <% if @kitten.errors.any? %>
+        <div id="error_explanation">
+            <h2>This is a pretty easy form, please fill it out right</h2>
+
+            <ul>
+                <% @kitten.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
     <div class="actions">
         <div class="field">
             <%= f.label :name, class: 'label' %>
