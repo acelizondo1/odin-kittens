@@ -17,7 +17,10 @@
     <% if flash[:alert] %>
       <p class="alert centered-text notification notice is-danger" onload="notificationTimeOut()"><%= alert %></p>
     <% end %>
-
-    <%= yield %>
+    <div class="columns">
+      <div class="column is-6 is-offset-3 has-text-centered">
+        <%= yield %>
+      <div>
+    </div>
   </body>
 </html>
