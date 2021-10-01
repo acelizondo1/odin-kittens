@@ -18,24 +18,32 @@
                 <%= f.text_field :name, class: 'input' %>
             </div>
         </div>
+
         <div class="field">
             <%= f.label :age, class: 'label' %>
             <div class="control">
                 <%= f.text_field :age, class: 'input' %>
             </div>
         </div>
+    
         <div class="field">
             <%= f.label :cuteness, class: 'label' %>
             <div class="control">
-                <%= f.text_field :cuteness, class: 'input' %>
+                <div class="select">
+                    <%= f.select(:cuteness, options_for_select(@options, @kitten.cuteness)) %>
+                </div>
             </div>
         </div>
+
         <div class="field">
             <%= f.label :softness, class: 'label' %>
             <div class="control">
-                <%= f.text_field :softness, class: 'input' %>
+                <div class="select">
+                    <%= f.select(:softness, options_for_select(@options, @kitten.softness)) %>
+                </div>
             </div>
         </div>
+
         <%= f.submit message, class: 'button' %>
     </div>
 <% end %>

@@ -5,6 +5,7 @@ class KittensController < ApplicationController
     end
 
     def new
+        options
         @kitten = Kitten.new
     end
 
@@ -13,6 +14,7 @@ class KittensController < ApplicationController
     end
 
     def edit 
+        options
         @kitten = Kitten.find(params[:id])
     end
 
@@ -54,4 +56,11 @@ class KittensController < ApplicationController
         params.require(:kitten).permit(:name, :age, :cuteness, :softness)
     end
 
+    def options
+        options = []
+        (0..10).each do |x|
+            options.push([x,x])
+        end
+        @options = options
+    end
 end
